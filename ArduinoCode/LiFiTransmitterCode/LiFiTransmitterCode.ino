@@ -42,7 +42,7 @@ void setup() {
   Serial.println("");
   Serial.println("the end");
   
-   digitalWrite(12,LOW);
+   digitalWrite(laserPin,LOW);
   Serial.println("Enter text you want to send .. or type exit");
   
   while(Serial.available()==0){
