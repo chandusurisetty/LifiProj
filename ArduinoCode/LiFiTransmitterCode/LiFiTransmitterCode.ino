@@ -1,8 +1,7 @@
-
 String myText;
-
-int laserPin=12;
 int delayTime=150;
+int laserPin=12;
+
 void setup() {
   
   pinMode(laserPin, OUTPUT);
@@ -13,7 +12,11 @@ void setup() {
     
   }
   myText=Serial.readString();
+  
   while(myText!="exit"){
+    digitalWrite(laserPin,HIGH);
+    delay(1000);
+    digitalWrite(laserPin,LOW);
   for(int i=0;i<myText.length();i++){
     char myChar=myText[i];
     for(int i=7;i>=0;i--){
