@@ -126,12 +126,12 @@ lcd.setCursor(0, 1);
 void clockbit(){
   ldrVal1=digitalRead(ldr);
   
-     while(ldrVal1==1){
-      digitalWrite(ledPin,LOW);
+     while(ldrVal1==0){
+      digitalWrite(ledPin,HIGH);
         ldrVal2=digitalRead(ldr);
         
-        if(ldrVal2==0){
-          digitalWrite(ledPin,HIGH);
+        if(ldrVal2==1){
+          digitalWrite(ledPin,LOW);
            
            delay(delayTime/2);
            isFirstbit=false;
