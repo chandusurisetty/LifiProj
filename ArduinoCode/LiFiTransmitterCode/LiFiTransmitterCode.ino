@@ -22,12 +22,12 @@ void setup() {
     for(int i=7;i>=0;i--){
       byte bytes=bitRead(myChar,i);
       Serial.print(bytes);
-      if(bytes==1){
+      if(bytes==0){
         digitalWrite(laserPin,HIGH);
         
         delay(delayTime);
       }
-      else if(bytes==0){
+      else if(bytes==1){
         digitalWrite(laserPin,LOW);
         delay(delayTime);
       }
