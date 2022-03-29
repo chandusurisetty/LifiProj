@@ -72,13 +72,13 @@ void bytesFormate(){
          ldrVal1=digitalRead(ldr);
     
          if(ldrVal1==0){
-            digitalWrite(ledPin,LOW);
+            digitalWrite(ledPin,HIGH);
             Serial.print("0");
             
             bytes+=0;
          }
          else if(ldrVal1==1){
-              digitalWrite(ledPin,HIGH);
+              digitalWrite(ledPin,LOW);
               Serial.print("1");
                 bytes+=1;
          }
@@ -127,11 +127,11 @@ void clockbit(){
   ldrVal1=digitalRead(ldr);
   
      while(ldrVal1==1){
-      digitalWrite(ledPin,HIGH);
+      digitalWrite(ledPin,LOW);
         ldrVal2=digitalRead(ldr);
         
         if(ldrVal2==0){
-          digitalWrite(ledPin,LOW);
+          digitalWrite(ledPin,HIGH);
            
            delay(delayTime/2);
            isFirstbit=false;
