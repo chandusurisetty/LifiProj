@@ -1,3 +1,5 @@
+
+#To my future self, Bro you never going to understand this code.....trust me 
 int ledPin=8;
 int ldr=10;
 int ldrVal1;
